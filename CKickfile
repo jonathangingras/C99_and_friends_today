@@ -1,0 +1,92 @@
+{
+    "name": "cs_games_2017_presentation",
+
+    "cmake_min_version": "3.0",
+
+    "root": ".",
+
+    "build_dir": "build",
+
+    "dependencies": {
+        "cxxflags": [
+            "-std=c++11",
+            "-O3",
+            "-g"
+        ],
+        "cflags": [
+            "-std=c89",
+            "-O3",
+            "-g"
+        ]
+    },
+
+    "plugins": [
+        {
+            "name": "ClangComplete"
+        }
+    ],
+
+    "subdirs": [
+        {
+            "name": "resource",
+            "has_cmake": false
+        },
+        {
+            "name": "src",
+            "executables": [
+                {
+                    "name": "vtable",
+                    "source": [
+                        "vtable.c"
+                    ]
+                },
+                {
+                    "name": "pipe",
+                    "source": [
+                        "pipe.c"
+                    ]
+                },
+                {
+                    "name": "dynamic_load",
+                    "source": [
+                        "dynamic_load.c"
+                    ]
+                },
+                {
+                    "name": "compile_at_runtime",
+                    "source": [
+                        "compile_at_runtime.c"
+                    ]
+                },
+                {
+                    "name": "sockets_server",
+                    "source": [
+                        "sockets_inet.c"
+                    ]
+                },
+                {
+                    "name": "template_specialization",
+                    "source": [
+                        "template_specialization.cc"
+                    ]
+                },
+                {
+                    "name": "trait",
+                    "source": [
+                        "trait.cc"
+                    ]
+                }
+            ],
+            "libraries": [
+                {
+                    "name": "dynamic_library",
+                    "shared": true,
+                    "source": [
+                        "dynamic_library.c"
+                    ],
+                    "libs": [ "dl" ]
+                }
+            ]
+        }
+    ]
+}
