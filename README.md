@@ -1,4 +1,4 @@
-# (*C99_today)++
+# C99 and friends today
 
 ## Presentation
 
